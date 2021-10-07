@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
+:root{
+    --green: #54E6AF;
+    --dark-blue: #2C344B;
+    --very-dark-blue: #121725;
+    --white: #FFFFFF;
+    --pale-blue: #5A668A;
+    --very-pale-blue: #C2CBE5;
+    font-size: 18px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Chivo', sans-serif;
+}
+body{
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100%;
+    background-image: url(./starter-code/assets/tablet/image-host.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: var(--very-dark-blue);
+}
+h1:only-of-type{
+    margin: 1.4em 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--green);
+    font-size: clamp(1.3rem, 3vw, 4rem);
+    line-height: clamp(1.2em, 2vw, 1.8em);
+}
+h1 span{
+    color: var(--white);
+}
+p:only-of-type{
+    color: var(--very-pale-blue);
+    line-height: 1.8em;
+    font-weight: 300;
+    font-size: .85rem;
+}
+.card{
+    border: 1px red solid;
+    margin: 0 auto;
+    padding: 3em 0;
+    max-width: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 1em;
+}
+#email{
+    border-radius: 22px;
+    outline: none;
+    border: none;
+    padding: 1em 0 1em 1.6em;
+    background-color: var(--dark-blue);
+    color: var(--very-pale-blue);
+    margin-bottom: .7em;
+}
+#primary-btn{
+    background-color: var(--green);
+    outline: none;
+    border: none;
+    padding: 1em 0;
+    border-radius: 22px;
+    color: var(--very-dark-blue);
+    font-weight: 700;
+    cursor: pointer;
+}
+#primary-btn:hover{
+    opacity: .6;
+}
+input:focus{
+    color: var(--white);
+}
+.images{
+    border: 1px orange solid;
+    margin: 1em 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    filter: invert(37%) sepia(50%) saturate(306%) hue-rotate(186deg) brightness(94%) contrast(87%);
+}
+.images img{
+    height: 100%;
+    width: 100%;
+    margin: auto .4em;
+}
+.card::before{
+    content: url(/starter-code/assets/desktop/logo.svg);
+}
+.order{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 767px){
+    .background{
+        position: relative;
+        height: 100vh;
+        background: var(--very-dark-blue);
+        padding: 6em 0;
+    }
+    .wrapper{
+        border: 1px yellow solid;
+        background-image: url(./starter-code/assets/tablet/image-host.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: normal;
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+        right: 0;
+    }
+    .card{
+        position: absolute;
+        border: 1px red solid;
+        top: 200px;
+        right:-100;
+        max-width: 625px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .order div:first-child{
+        order: 2;
+    }
+    .wrapper::before{
+        content: url(/starter-code/assets/desktop/logo.svg);
+    }
+    .card::before{
+        content: '';
+    }
+    #form{
+        width: 70%;
+        display: flex;
+    }
+    @media (min-width: 1200px){
+        .background{
+            margin: auto;
+        }
+        .wrapper{
+            max-width: 100%;
+            max-height: 100%;
+            right: 0;
+            border: 1px yellow solid;
+            background-image: url(./starter-code/assets/desktop/image-host.jpg);
+        }
+    }
+}
