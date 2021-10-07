@@ -143,6 +143,7 @@ input:focus{
         width: 70%;
         display: flex;
     }
+}
     @media (min-width: 1200px){
         .background{
             margin: auto;
@@ -154,5 +155,4 @@ input:focus{
             border: 1px yellow solid;
             background-image: url(./starter-code/assets/desktop/image-host.jpg);
         }
-    }
 }
