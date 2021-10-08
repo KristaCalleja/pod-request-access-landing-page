@@ -46,7 +46,6 @@ p:only-of-type{
     background-color: var(--very-dark-blue);
 }
 .card{
-    border: 1px red solid;
     margin: 0 auto;
     padding: 3em 0;
     max-width: 325px;
@@ -64,16 +63,15 @@ p:only-of-type{
     border-radius: 22px;
     outline: none;
     border: none;
-    padding: 1em 0 1em 1.6em;
+    padding: 1.2em 0 1.2em 1.6em;
     background-color: var(--dark-blue);
     color: var(--very-pale-blue);
-    margin-bottom: .7em;
 }
 #primary-btn{
     background-color: var(--green);
     outline: none;
     border: none;
-    padding: 1em 0;
+    padding: 1em 2.5em;
     border-radius: 22px;
     color: var(--very-dark-blue);
     font-weight: 700;
@@ -105,49 +103,58 @@ input:focus{
     display: flex;
     flex-direction: column;
 }
-@media (min-width: 767px){
-    .background{
-        position: relative;
-        height: 100vh;
-        background: var(--very-dark-blue);
+    @media (min-width: 767px){
+        .background{
+            position: relative;
+            height: 100vh;
+            background: var(--very-dark-blue);
+        }
+        .wrapper{
+            background-image: url(images/tablet-image-host.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-blend-mode: normal;
+            position: relative;
+            width: 100%;
+            margin: 0 35%;
+        }
+        .card{
+            position: absolute;
+            top: 277px;
+            left: -269px;
+            max-width: 573px;
+            text-align: left;
+            padding: 3em 2.5em;
+            background: var(--very-dark-blue);
+        }
+        .card p{
+            padding-right: 13em;
+        }
+        .order div:first-child{
+            order: 2;
+        }
+        .card::before{
+            top: -200px;
+            position: absolute;
+        }
+        #form{
+            position: relative;
+            flex-direction: row;
+            align-items: center;
+            width: 70%;
+        }
+        #email{
+            width: 100%;
+        }
+        #primary-btn{
+            position: absolute;
+            right: 0;
+        }
     }
-    .wrapper{
-        border: 1px yellow solid;
-        background-image: url(images/tablet-image-host.jpg);
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-blend-mode: normal;
-        position: relative;
-        width: 100%;
-        margin: 0 35%;
-    }
-    .card{
-        position: absolute;
-        border: 1px red solid;
-        top: 277px;
-        left: -269px;
-        max-width: 573px;
-        text-align: left;
-        padding: 3em 2.5em;
-        background: var(--very-dark-blue);
-    }
-    .card p{
-        padding-right: 13em;
-    }
-    .order div:first-child{
-        order: 2;
-    }
-    .card::before{
-        top: -200px;
-        position: absolute;
-    }
-    #form{
-        width: 70%;
-    }
-}
     @media (min-width: 1200px){
         .background{
-            padding: 6em;
+            padding: 3em 0;
+            max-height: 900px;
         }
         .wrapper{
             background-image: url(images/desktop-image-host.jpg);
@@ -157,5 +164,6 @@ input:focus{
         }
         .card{
             left: -335px;
+            top: 51px;
         }
-}
+    }
