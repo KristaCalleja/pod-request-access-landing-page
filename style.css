@@ -38,7 +38,7 @@ p:only-of-type{
 .background{
     min-height: 667px;
 }
-.wrapper{
+.image-host{
     height: 100%;
     background-image: url(images/tablet-image-host.jpg);
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ p:only-of-type{
     background-blend-mode: overlay;
     background-color: var(--very-dark-blue);
 }
-.card{
+.content{
     margin: 0 auto;
     padding: 3em 0;
     max-width: 325px;
@@ -96,7 +96,7 @@ p:only-of-type{
 input:focus{
     color: var(--white);
 }
-.images{
+.logos{
     margin: 1em 0;
     height: 100%;
     width: 100%;
@@ -109,15 +109,15 @@ input:focus{
     -webkit-filter: invert(37%) sepia(50%) saturate(306%) hue-rotate(186deg) brightness(94%) contrast(87%);
             filter: invert(37%) sepia(50%) saturate(306%) hue-rotate(186deg) brightness(94%) contrast(87%);
 }
-.images img{
+.logos img{
     height: 100%;
     width: 100%;
     margin: auto .4em;
 }
-.card::before{
+.content::before{
     content: url(images/logo.svg);
 }
-.order{
+.flexbox{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -132,7 +132,7 @@ input:focus{
             height: 100vh;
             background: var(--very-dark-blue);
         }
-        .wrapper{
+        .image-host{
             background-image: url(images/tablet-image-host.jpg);
             background-repeat: no-repeat;
             background-size: auto;
@@ -141,7 +141,7 @@ input:focus{
             width: 50%;
             margin: 0 35%;
         }
-        .card{
+        .content{
             position: absolute;
             top: 277px;
             left: -269px;
@@ -150,15 +150,15 @@ input:focus{
             padding: 1em 2.5em;
             background: var(--very-dark-blue);
         }
-        .card p{
+        .content p{
             padding-right: 13em;
         }
-        .order div:first-child{
+        .logos{
             -webkit-box-ordinal-group: 3;
                 -ms-flex-order: 2;
                     order: 2;
         }
-        .card::before{
+        .content::before{
             top: -200px;
             position: absolute;
         }
@@ -186,13 +186,13 @@ input:focus{
             padding: 3em 0;
             max-height: 900px;
         }
-        .wrapper{
+        .image-host{
             background-image: url(images/desktop-image-host.jpg);
         }
-        .card::before{
+        .content::before{
             top: -154px;
         }
-        .card{
+        .content{
             left: -335px;
             top: 136px;
         }
