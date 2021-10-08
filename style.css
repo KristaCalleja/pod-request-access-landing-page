@@ -126,6 +126,9 @@ input:focus{
         -ms-flex-direction: column;
             flex-direction: column;
 }
+.helper{
+    color: red;
+}
     @media (min-width: 767px){
         .background{
             position: relative;
