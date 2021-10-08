@@ -15,7 +15,8 @@
 }
 /* Typography */
 body{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 h1:only-of-type{
     margin: 1.4em 0;
@@ -49,14 +50,26 @@ p:only-of-type{
     margin: 0 auto;
     padding: 3em 0;
     max-width: 325px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
 }
 #form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 2em 1em;
 }
 #email{
@@ -87,9 +100,14 @@ input:focus{
     margin: 1em 0;
     height: 100%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    filter: invert(37%) sepia(50%) saturate(306%) hue-rotate(186deg) brightness(94%) contrast(87%);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-filter: invert(37%) sepia(50%) saturate(306%) hue-rotate(186deg) brightness(94%) contrast(87%);
+            filter: invert(37%) sepia(50%) saturate(306%) hue-rotate(186deg) brightness(94%) contrast(87%);
 }
 .images img{
     height: 100%;
@@ -100,8 +118,13 @@ input:focus{
     content: url(images/logo.svg);
 }
 .order{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
     @media (min-width: 767px){
         .background{
@@ -115,7 +138,7 @@ input:focus{
             background-size: auto;
             background-blend-mode: normal;
             position: relative;
-            width: 100%;
+            width: 50%;
             margin: 0 35%;
         }
         .card{
@@ -131,7 +154,9 @@ input:focus{
             padding-right: 13em;
         }
         .order div:first-child{
-            order: 2;
+            -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                    order: 2;
         }
         .card::before{
             top: -200px;
@@ -139,8 +164,13 @@ input:focus{
         }
         #form{
             position: relative;
-            flex-direction: row;
-            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             width: 70%;
         }
         #email{
@@ -160,7 +190,7 @@ input:focus{
             background-image: url(images/desktop-image-host.jpg);
         }
         .card::before{
-            top: -312px;
+            top: -154px;
         }
         .card{
             left: -335px;
