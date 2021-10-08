@@ -111,7 +111,6 @@ input:focus{
         position: relative;
         height: 100vh;
         background: var(--very-dark-blue);
-        padding: 6em 0;
     }
     .wrapper{
         border: 1px yellow solid;
@@ -142,7 +141,6 @@ input:focus{
     .card::before{
         top: -200px;
         position: absolute;
-
     }
     #form{
         width: 70%;
