@@ -124,7 +124,7 @@ input:focus{
             left: -269px;
             max-width: 573px;
             text-align: left;
-            padding: 3em 2.5em;
+            padding: 1em 2.5em;
             background: var(--very-dark-blue);
         }
         .card p{
@@ -164,6 +164,6 @@ input:focus{
         }
         .card{
             left: -335px;
-            top: 51px;
+            top: 136px;
         }
     }
