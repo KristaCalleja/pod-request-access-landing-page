@@ -86,7 +86,6 @@ input:focus{
     color: var(--white);
 }
 .images{
-    border: 1px orange solid;
     margin: 1em 0;
     height: 100%;
     width: 100%;
@@ -144,18 +143,19 @@ input:focus{
     }
     #form{
         width: 70%;
-        display: flex;
     }
 }
     @media (min-width: 1200px){
         .background{
             padding: 6em;
-            margin: auto;
         }
         .wrapper{
-            max-width: 1200px;
-            right: 0;
-            border: 1px yellow solid;
             background-image: url(images/desktop-image-host.jpg);
+        }
+        .card::before{
+            top: -312px;
+        }
+        .card{
+            left: -335px;
         }
 }
