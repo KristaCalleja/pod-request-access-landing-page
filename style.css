@@ -8,16 +8,23 @@
     --very-pale-blue: #C2CBE5;
     font-size: 18px;
 }
-*{
+*, 
+*::before,
+*::after{
     margin: 0;
     padding: 0;
     font-family: 'Chivo', sans-serif;
+    box-sizing: inherit;
 }
-/* Typography */
-body{
+html{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            background: var(--very-dark-blue);
 }
+ul{
+    list-style-type: none;
+}
+/* Typography */
 h1:only-of-type{
     margin: 1.4em 0;
     font-weight: 300;
@@ -36,10 +43,12 @@ p:only-of-type{
     font-size: .85rem;
 }
 .background{
-    min-height: 667px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .image-host{
-    height: 100%;
+    height: 100vh;
     background-image: url(images/tablet-image-host.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,17 +71,12 @@ p:only-of-type{
             justify-content: center;
     text-align: center;
 }
-#form{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 2em 1em;
+#logo{
+    height: 100%;
+    margin: 0 auto;
 }
 #email{
+    width: 100%;
     border-radius: 22px;
     outline: none;
     border: none;
@@ -81,6 +85,7 @@ p:only-of-type{
     color: var(--very-pale-blue);
 }
 #primary-btn{
+    width: 100%;
     background-color: var(--green);
     outline: none;
     border: none;
@@ -93,11 +98,14 @@ p:only-of-type{
 #primary-btn:hover{
     opacity: .6;
 }
+#primary-btn:focus-visible{
+    outline: 1px var(--white) solid;
+}
 input:focus{
     color: var(--white);
 }
-.logos{
-    margin: 1em 0;
+ul{
+    margin: 1.5em 0;
     height: 100%;
     width: 100%;
     display: -webkit-box;
@@ -108,14 +116,11 @@ input:focus{
             justify-content: center;
     -webkit-filter: invert(37%) sepia(50%) saturate(306%) hue-rotate(186deg) brightness(94%) contrast(87%);
             filter: invert(37%) sepia(50%) saturate(306%) hue-rotate(186deg) brightness(94%) contrast(87%);
+    align-items: center;
 }
-.logos img{
-    height: 100%;
+li{
     width: 100%;
-    margin: auto .4em;
-}
-.content::before{
-    content: url(images/logo.svg);
+    margin-left: clamp(.02em, 2.75vw, 1.9em);
 }
 .flexbox{
     display: -webkit-box;
@@ -126,13 +131,23 @@ input:focus{
         -ms-flex-direction: column;
             flex-direction: column;
 }
-.helper{
+.error-input{
+    visibility: hidden;
     color: red;
+    font-size: .7rem;
+}
+.show-error{
+    visibility: visible;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    font-size: 11px;
+    color: var(--very-pale-blue);
 }
     @media (min-width: 767px){
         .background{
             position: relative;
-            height: 100vh;
             background: var(--very-dark-blue);
         }
         .image-host{
@@ -150,50 +165,38 @@ input:focus{
             left: -269px;
             max-width: 573px;
             text-align: left;
-            padding: 1em 2.5em;
+            padding: 1em 2.5em 0 2.5em;
             background: var(--very-dark-blue);
         }
         .content p{
-            padding-right: 13em;
+            padding-right: 7em;
         }
         .logos{
             -webkit-box-ordinal-group: 3;
                 -ms-flex-order: 2;
                     order: 2;
         }
-        .content::before{
-            top: -200px;
-            position: absolute;
-        }
         #form{
+            margin: 1.5em 0;
             position: relative;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            width: 70%;
-        }
-        #email{
-            width: 100%;
         }
         #primary-btn{
+            width: 40%;
             position: absolute;
             right: 0;
+            top: 1.5px;
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
         }
     }
     @media (min-width: 1200px){
         .background{
             padding: 3em 0;
-            max-height: 900px;
         }
         .image-host{
             background-image: url(images/desktop-image-host.jpg);
-        }
-        .content::before{
-            top: -154px;
         }
         .content{
             left: -335px;

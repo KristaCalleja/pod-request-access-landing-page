@@ -13,32 +13,37 @@
   <div class="background">
     <div class="image-host">
       <main class="content">
+        <header role="banner">
+          <img id="logo" src="images/logo.svg" alt="pod">
+        </header>
         <div>
           <h1>Publish your podcasts <span>everywhere.</span></h1>
           <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple
             Podcasts, Google Podcasts, Pocket Casts and more!</p>
         </div>
         <div class="flexbox">
-          <div class="logos">
-            <img src="images/spotify.svg" alt="">
-            <img src="images/apple-podcast.svg" alt="">
-            <img src="images/google-podcasts.svg" alt="">
-            <img src="images/pocket-casts.svg" alt="">
-          </div>
-          <form id="form" action="">
-            <input class="input" type="email" name="email" id="email" placeholder="Email address">
+          <ul class="logos">
+            <li><img src="images/spotify.svg" alt="spotify"></li>
+            <li><img src="images/apple-podcast.svg" alt="apple podcast"></li>
+            <li><img src="images/google-podcasts.svg" alt="google podcasts"></li>
+            <li><img src="images/pocket-casts.svg" alt="pocket casts"></li>
+          </ul>
+          <form id="form" action="#">
+            <div class="input-aria-live sr-only" aria-live="polite"></div>
+            <input class="input" autoComplete="off" type="email" name="email" id="email" placeholder="Email address">
+            <div class="error-input">Oops! Please check your email</div>
             <button id="primary-btn" type="submit">Request Access</button>
           </form>
         </div>
       </main>
+      <footer>
+        Challenge by <a
+          href="https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG/hub/pod-request-access-landing-page-gDp-LNYVz"
+          target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://kristacalleja.github.io/">Krista Calleja | UI Developer</a>.
+      </footer>
     </div>
   </div>
-  <footer style="font-size: 11px; text-align: center;">
-    Challenge by <a
-      href="https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG/hub/pod-request-access-landing-page-gDp-LNYVz"
-      target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://kristacalleja.github.io/">Krista Calleja</a>.
-  </footer>
   <script src="main.js"></script>
 </body>
 
